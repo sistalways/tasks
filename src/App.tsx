@@ -8,9 +8,8 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript Girish Sista
             </header>
             <p>
-                Edit <code>src/App.tsx</code> and save to reload. Edit{" "}
-                <code>src/App.tsx</code> and save. This page will automatically
-                reload.
+                Edit <code>src/App.tsx</code> and save to reload. This page will
+                automatically reload. Hello World
             </p>
         </div>
     );
