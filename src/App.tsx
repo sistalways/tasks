@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import { Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 function App(): JSX.Element {
     return (
@@ -8,9 +10,30 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript Girish Sista
             </header>
             <p>
-                Edit <code>src/App.tsx</code> and save to reload. This page will
-                automatically reload. Hello World
+                <h1>Kratos</h1>
+                <img
+                    src="https://miro.medium.com/v2/resize:fit:1358/1*PZqj8v8vxE39wrgROJCplA.jpeg"
+                    alt="The Ghost of Sparta"
+                />
             </p>
+            <ul>
+                <li>Kratos is known as the God of War.</li>
+                <li>He is also known as the Ghost of Sparta.</li>
+                <li>He died 3 times and is still alive.</li>
+            </ul>
+            <Button onClick={() => console.log("Hello World!")}>
+                Log Hello World
+            </Button>
+            <Container>
+                <Row>
+                    <Col>
+                        <div className="App-Rect">Column I</div>
+                    </Col>
+                    <Col>
+                        <div className="App-Rect">Column II</div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 }
