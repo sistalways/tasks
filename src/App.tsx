@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { Button } from "react-bootstrap";
 import { Container, Row, Col } from "react-bootstrap";
+import img from "./images/images.jpeg";
 
 function App(): JSX.Element {
     return (
@@ -11,10 +12,7 @@ function App(): JSX.Element {
             </header>
             <p>
                 <h1>Kratos</h1>
-                <img
-                    src="https://miro.medium.com/v2/resize:fit:1358/1*PZqj8v8vxE39wrgROJCplA.jpeg"
-                    alt="The Ghost of Sparta"
-                />
+                <img src={img} alt="The Ghost of Sparta" />
             </p>
             <ul>
                 <li>Kratos is known as the God of War.</li>
