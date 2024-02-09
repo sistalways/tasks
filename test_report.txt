@@ -12,262 +12,61 @@ Browserslist: caniuse-lite is outdated. Please run:
   npx browserslist@latest --update-db
   Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
 PASS src/text.test.tsx
+  ● Console
+
+    console.error
+      Warning: validateDOMNesting(...): <h1> cannot appear as a descendant of <p>.
+          at h1
+          at p
+          at div
+          at App
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10083:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
+
 PASS src/App.test.tsx
-FAIL src/HtmlCss.test.tsx
-  ● Some HTML Elements are added. › There is a header
+  ● Console
 
-    TestingLibraryElementError: Unable to find an accessible element with the role "heading"
+    console.error
+      Warning: validateDOMNesting(...): <h1> cannot appear as a descendant of <p>.
+          at h1
+          at p
+          at div
+          at App
 
-    Here are the accessible roles:
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10083:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
 
-      banner:
+PASS src/HtmlCss.test.tsx
+  ● Console
 
-      Name "":
-      [36m<header[39m
-        [33mclass[39m=[32m"App-header"[39m
-      [36m/>[39m
+    console.error
+      Warning: validateDOMNesting(...): <h1> cannot appear as a descendant of <p>.
+          at h1
+          at p
+          at div
+          at App
 
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [0mUD CISC275 with React Hooks and TypeScript Girish Sista[0m
-          [36m</header>[39m
-          [36m<p>[39m
-            [0mEdit [0m
-            [36m<code>[39m
-              [0msrc/App.tsx[0m
-            [36m</code>[39m
-            [0m and save to reload. This page will automatically reload. Hello World[0m
-          [36m</p>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-       7 |     test("There is a header", () => {
-       8 |         render(<App />);
-    >  9 |         const header = screen.getByRole("heading");
-         |                               ^
-      10 |         expect(header).toBeInTheDocument();
-      11 |     });
-      12 |
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/HtmlCss.test.tsx:9:31)
-
-  ● Some HTML Elements are added. › There is an image with alt text
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "img"
-
-    Here are the accessible roles:
-
-      banner:
-
-      Name "":
-      [36m<header[39m
-        [33mclass[39m=[32m"App-header"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [0mUD CISC275 with React Hooks and TypeScript Girish Sista[0m
-          [36m</header>[39m
-          [36m<p>[39m
-            [0mEdit [0m
-            [36m<code>[39m
-              [0msrc/App.tsx[0m
-            [36m</code>[39m
-            [0m and save to reload. This page will automatically reload. Hello World[0m
-          [36m</p>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      13 |     test("There is an image with alt text", () => {
-      14 |         render(<App />);
-    > 15 |         const image = screen.getByRole("img");
-         |                              ^
-      16 |         expect(image).toBeInTheDocument();
-      17 |         expect(image).toHaveAttribute("alt");
-      18 |     });
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/HtmlCss.test.tsx:15:30)
-
-  ● Some HTML Elements are added. › There is a list with at least three elements
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "list"
-
-    Here are the accessible roles:
-
-      banner:
-
-      Name "":
-      [36m<header[39m
-        [33mclass[39m=[32m"App-header"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [0mUD CISC275 with React Hooks and TypeScript Girish Sista[0m
-          [36m</header>[39m
-          [36m<p>[39m
-            [0mEdit [0m
-            [36m<code>[39m
-              [0msrc/App.tsx[0m
-            [36m</code>[39m
-            [0m and save to reload. This page will automatically reload. Hello World[0m
-          [36m</p>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      20 |     test("There is a list with at least three elements", () => {
-      21 |         render(<App />);
-    > 22 |         const list = screen.getByRole("list");
-         |                             ^
-      23 |         expect(list).toBeInTheDocument();
-      24 |         expect(list.children.length).toBeGreaterThanOrEqual(3);
-      25 |     });
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/HtmlCss.test.tsx:22:29)
-
-  ● Some Bootstrap Elements are added › There is one bootstrap button with the text 'Log Hello World'
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Log Hello World/i`
-
-    Here are the accessible roles:
-
-      banner:
-
-      Name "":
-      [36m<header[39m
-        [33mclass[39m=[32m"App-header"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [0mUD CISC275 with React Hooks and TypeScript Girish Sista[0m
-          [36m</header>[39m
-          [36m<p>[39m
-            [0mEdit [0m
-            [36m<code>[39m
-              [0msrc/App.tsx[0m
-            [36m</code>[39m
-            [0m and save to reload. This page will automatically reload. Hello World[0m
-          [36m</p>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      39 |     test("There is one bootstrap button with the text 'Log Hello World'", () => {
-      40 |         render(<App />);
-    > 41 |         const button = screen.getByRole("button", { name: /Log Hello World/i });
-         |                               ^
-      42 |         expect(button).toBeInTheDocument();
-      43 |         expect(button).toHaveClass("btn");
-      44 |         expect(button).toHaveClass("btn-primary");
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/HtmlCss.test.tsx:41:31)
-
-  ● Some Bootstrap Elements are added › Clicking the bootstrap button logs 'Hello World!'
-
-    TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/Log Hello World/i`
-
-    Here are the accessible roles:
-
-      banner:
-
-      Name "":
-      [36m<header[39m
-        [33mclass[39m=[32m"App-header"[39m
-      [36m/>[39m
-
-      --------------------------------------------------
-
-    Ignored nodes: comments, <script />, <style />
-    [36m<body>[39m
-      [36m<div>[39m
-        [36m<div[39m
-          [33mclass[39m=[32m"App"[39m
-        [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [0mUD CISC275 with React Hooks and TypeScript Girish Sista[0m
-          [36m</header>[39m
-          [36m<p>[39m
-            [0mEdit [0m
-            [36m<code>[39m
-              [0msrc/App.tsx[0m
-            [36m</code>[39m
-            [0m and save to reload. This page will automatically reload. Hello World[0m
-          [36m</p>[39m
-        [36m</div>[39m
-      [36m</div>[39m
-    [36m</body>[39m
-
-      54 |         const consoleSpy = jest.spyOn(console, "log");
-      55 |         render(<App />);
-    > 56 |         const button = screen.getByRole("button", { name: /Log Hello World/i });
-         |                               ^
-      57 |         userEvent.click(button);
-      58 |         expect(consoleSpy).toHaveBeenCalledWith("Hello World!");
-      59 |     });
-
-      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:38:19)
-      at node_modules/@testing-library/dom/dist/query-helpers.js:90:38
-      at node_modules/@testing-library/dom/dist/query-helpers.js:62:17
-      at getByRole (node_modules/@testing-library/dom/dist/query-helpers.js:111:19)
-      at Object.<anonymous> (src/HtmlCss.test.tsx:56:31)
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:67:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:43:5)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10083:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10181:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:19464:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22812:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:22787:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:22707:5)
 
 ----------|---------|----------|---------|---------|-------------------
 File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
@@ -275,8 +74,9 @@ File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s
 All files |     100 |      100 |     100 |     100 |                   
  App.tsx  |     100 |      100 |     100 |     100 |                   
 ----------|---------|----------|---------|---------|-------------------
-Test Suites: 1 failed, 2 passed, 3 total
-Tests:       5 failed, 4 passed, 9 total
+
+Test Suites: 3 passed, 3 total
+Tests:       9 passed, 9 total
 Snapshots:   0 total
-Time:        2.373 s
+Time:        2.74 s
 Ran all test suites.
