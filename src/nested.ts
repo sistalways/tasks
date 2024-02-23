@@ -1,5 +1,4 @@
-/* eslint-disable indent */
-import { text } from "stream/consumers";
+//import { text } from "stream/consumers";
 import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { duplicateQuestion, makeBlankQuestion } from "./objects";
@@ -272,28 +271,27 @@ export function changeQuestionTypeById(
 export function editOption(
     questions: Question[],
     targetId: number,
-    targetOptionIndex: number,
+    TOI: number,
     newOption: string
 ): Question[] {
+    const TI = questions.findIndex((q: Question): boolean => q.id === targetId);
     const finQ = questions.map(
         (q: Question): Question => ({
-            id: q.id,
-            name: q.name,
-            type: q.type,
-            body: q.body,
+            ...q,
             options:
                 q.id === targetId
-                    ? targetOptionIndex === -1
+                    ? TOI === -1
                         ? [...q.options, newOption]
-                        : q.options.map((opt: string, index): string =>
-                              index === targetOptionIndex ? newOption : opt
-                          )
-                    : q.options,
-            expected: q.expected,
-            points: q.points,
-            published: q.published
+                        : [...q.options]
+                    : q.options
         })
     );
+    if (TI !== -1) {
+        if (TOI !== -1) {
+            finQ[TI].options[TOI] = newOption;
+        }
+    }
+
     return finQ;
 }
 
