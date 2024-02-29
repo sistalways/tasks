@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function RevealAnswer(): JSX.Element {
-    const [value, setValue] = useState<number>(42);
+    const [ans, setAns] = useState<number>(42);
     const [showAns, setShowAns] = useState<boolean>(false);
     return (
         <>
@@ -19,7 +19,7 @@ export function RevealAnswer(): JSX.Element {
             </span>
             <div>
                 {showAns ? (
-                    <span>Answer: {value}.</span>
+                    <span>Answer: {ans}.</span>
                 ) : (
                     <span>Click To Show Answer.</span>
                 )}
