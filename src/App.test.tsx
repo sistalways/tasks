@@ -1,5 +1,6 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
+export {};
 import App from "./App";
 
 test("renders the course name somewhere", () => {
