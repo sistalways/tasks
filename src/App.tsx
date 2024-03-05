@@ -7,7 +7,6 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
-import { DoubleHalf } from "./bad-components/DoubleHalf";
 import { ColoredBox } from "./bad-components/ColoredBox";
 import { ShoveBox } from "./bad-components/ShoveBox";
 import { ChooseTeam } from "./bad-components/ChooseTeam";
@@ -24,10 +23,6 @@ function App(): JSX.Element {
                 UD CISC275 with React Hooks and TypeScript
             </header>
             <hr></hr>
-<<<<<<< HEAD
-            {/*<DoubleHalf></DoubleHalf>*/}
-            <DoubleHalf></DoubleHalf>
-=======
             <CheckAnswer expectedAnswer="42"></CheckAnswer>
             <hr></hr>
             <GiveAttempts></GiveAttempts>
@@ -42,7 +37,6 @@ function App(): JSX.Element {
             ></MultipleChoiceQuestion>
             <hr></hr>
             {/* <DoubleHalf></DoubleHalf> */}
->>>>>>> upstream/task-forms
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
