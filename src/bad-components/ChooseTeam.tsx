@@ -9,25 +9,23 @@ const PEOPLE = [
     "Barbara Liskov",
     "Margaret Hamilton"
 ];
+interface teamProp {
+    team: string[];
+    setTeam: (t: string[]) => void;
+}
+function chooseMember({ team, setTeam }: teamProp, newMember: string) {
+    if (!team.includes(newMember)) {
+        setTeam([...team, newMember]);
+    }
+}
 
 export function ChooseTeam(): JSX.Element {
-    const [allOptions, setAllOptions] = useState<string[]>(PEOPLE);
+    const [allOptions] = useState<string[]>(PEOPLE);
     const [team, setTeam] = useState<string[]>([]);
 
-    function chooseMember() {
-        /*
-        if (!team.includes(newMember)) {
-            team.push(newMember);
-        }
-        */
-    }
-
     function clearTeam() {
-        /*
-        team = [];
-        */
+        setTeam([]);
     }
-
     return (
         <div>
             <h3>Choose Team</h3>
@@ -36,14 +34,19 @@ export function ChooseTeam(): JSX.Element {
                     {allOptions.map((option: string) => (
                         <div key={option} style={{ marginBottom: "4px" }}>
                             Add{" "}
-                            <Button onClick={chooseMember} size="sm">
+                            <Button
+                                onClick={() =>
+                                    chooseMember({ team, setTeam }, option)
+                                }
+                                size="sm"
+                            >
                                 {option}
                             </Button>
                         </div>
                     ))}
                 </Col>
                 <Col>
-                    <strong>Team:</strong>
+                    <strong>Team: </strong>
                     {team.map((member: string) => (
                         <li key={member}>{member}</li>
                     ))}
