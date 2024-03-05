@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-interface ColorProp {
+interface dhProp {
     dhValue: number;
     setDhValue: (val: number) => void;
 }
-function Doubler({ dhValue, setDhValue }: ColorProp): JSX.Element {
+function Doubler({ dhValue, setDhValue }: dhProp): JSX.Element {
     return <Button onClick={() => setDhValue(2 * dhValue)}>Double</Button>;
 }
 
-function Halver({ dhValue, setDhValue }: ColorProp): JSX.Element {
+function Halver({ dhValue, setDhValue }: dhProp): JSX.Element {
     return <Button onClick={() => setDhValue(0.5 * dhValue)}>Halve</Button>;
 }
 export function DoubleHalf(): JSX.Element {

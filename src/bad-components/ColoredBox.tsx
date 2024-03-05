@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export const COLORS = ["red", "blue", "green"];
-const DEFAULT_COLOR_INDEX = 0;
 interface ColorProp {
     colorIndex: number;
     setColorIndex: (ind: number) => void;
@@ -20,7 +19,7 @@ function ChangeColor({ colorIndex, setColorIndex }: ColorProp): JSX.Element {
     );
 }
 
-function ColorPreview({ colorIndex, setColorIndex }: ColorProp): JSX.Element {
+function ColorPreview({ colorIndex }: ColorProp): JSX.Element {
     return (
         <div
             data-testid="colored-box"
