@@ -54,7 +54,7 @@ export function EditMode(): JSX.Element {
                             </Form.Group>
                         </>
                     ) : (
-                        ""
+                        <span></span>
                     )}
                 </div>
                 <div>
